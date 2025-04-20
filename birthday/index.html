@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Just For You</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    input {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffffff10;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00c9a7;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #00b293;
+    }
+  </style>
+  <script>
+    function checkLogin() {
+      const username = document.getElementById("uname").value.toLowerCase();
+      const password = document.getElementById("pass").value;
+
+      if (username === "ashu" && password === "2130") {
+        window.location.href = "home.html";
+      } else {
+        alert("Oops! Wrong details.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Hiiee Buubbbuu!! chal unlock kr 🎁</h2>
+    <input type="text" id="uname" placeholder="Your Name"><br>
+    <input type="password" id="pass" placeholder="Secret Code"><br>
+    <button onclick="checkLogin()">Unlock</button>
+  </div>
+</body>
+</html>
